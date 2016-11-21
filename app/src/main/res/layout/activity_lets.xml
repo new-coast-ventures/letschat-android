@@ -1,0 +1,327 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.firma.dev.letschat.LetsActivity"
+    android:background="#fff"
+    android:id="@+id/lay">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#4A90E2"
+            android:gravity="center"
+            android:id="@+id/backLogoLayout"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="10">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:id="@+id/imageView7"
+                android:src="@drawable/logo_chat"
+                android:paddingLeft="15dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:id="@+id/imageView8"
+                android:src="@drawable/logo_lets"
+                android:layout_marginTop="22dp"
+                android:paddingRight="15dp" />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/backGearBtn"
+                android:src="@drawable/gear"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:layout_alignTop="@+id/imageView7"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/backLogoLayout"
+            android:layout_weight="90">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:id="@+id/toggleLayout">
+
+                <ToggleButton
+                    android:layout_width="300dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/toggleButton"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/custom_tb"
+                    android:checked="false"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:textOff=""
+                    android:textOn=""/>
+
+            </RelativeLayout>
+
+            <view
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                class="android.support.v4.view.ViewPager"
+                android:id="@+id/letsPager"
+                android:layout_below="@+id/toggleLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/preTimerBtn"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/lets_chat_time_button"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:clickable="true" />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:text="36 min"
+                android:id="@+id/availableBtn"
+                android:textAllCaps="false"
+                android:layout_alignTop="@+id/preTimerBtn"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/lets_chat_time_green"
+                android:textColor="#fff"
+                android:textSize="12dp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            android:layout_weight="10"
+            android:id="@+id/dummySpacer"></RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/TimerLayout"
+            android:background="#fff"
+            android:alpha="0.92"
+            android:clickable="false"
+            android:visibility="invisible"
+            android:layout_alignParentTop="true"
+            android:layout_weight="90">
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/min10Btn"
+                android:src="@drawable/b_10min"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:clickable="true"
+                android:maxWidth="55dp"
+                android:maxHeight="55dp"
+                android:layout_alignBottom="@+id/timerBtn"
+                android:layout_alignLeft="@+id/timerBtn"
+                android:layout_marginLeft="-170px"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/min20Btn"
+                android:src="@drawable/b_20min"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:clickable="true"
+                android:layout_alignBottom="@+id/timerBtn"
+                android:layout_alignLeft="@+id/timerBtn"
+                android:layout_marginBottom="120px"
+                android:layout_marginLeft="-120px"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/min30Btn"
+                android:src="@drawable/b_30min"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:clickable="true"
+                android:layout_alignBottom="@+id/timerBtn"
+                android:layout_alignLeft="@+id/timerBtn"
+                android:layout_marginBottom="170px"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/min45Btn"
+                android:src="@drawable/b_45min"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:clickable="true"
+                android:layout_alignLeft="@+id/timerBtn"
+                android:layout_alignBottom="@+id/timerBtn"
+                android:layout_marginLeft="120px"
+                android:layout_marginBottom="120px"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/min60Btn"
+                android:src="@drawable/b_60min"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:clickable="true"
+                android:layout_alignBottom="@+id/timerBtn"
+                android:layout_alignLeft="@+id/timerBtn"
+                android:layout_marginLeft="170px"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/timerBtn"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/lets_chat_time_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is where you can set the amount time you&apos;re available to chat. Choose any of the time increments available below"
+                android:id="@+id/timerDesc"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#4A90E2"
+                android:textSize="17dp"
+                android:gravity="center"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skip"
+                android:id="@+id/skipText"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="#4A90E2"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp" />
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/endBtn"
+                android:layout_alignTop="@+id/min10Btn"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/lets_chat_time_red"
+                android:alpha="1"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4A90E2"
+        android:id="@+id/dummyLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:id="@+id/chatLogo"
+            android:src="@drawable/logo_chat"
+            android:layout_alignStart="@+id/letsLogo"
+            android:paddingLeft="20dp"
+            android:layout_centerInParent="true"
+            android:paddingBottom="27dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:id="@+id/letsLogo"
+            android:src="@drawable/logo_lets"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:paddingRight="20dp"
+            android:paddingTop="27dp"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/frontGearBtn"
+            android:src="@drawable/gear"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

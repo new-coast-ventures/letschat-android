@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.firma.dev.letschat.ValidationActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:background="#4A90E2"
+            android:id="@+id/dummyTitle"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="10">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:id="@+id/imageView7"
+                android:src="@drawable/logo_chat"
+                android:paddingLeft="15dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:id="@+id/imageView8"
+                android:src="@drawable/logo_lets"
+                android:layout_marginTop="22dp"
+                android:paddingRight="15dp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="90">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter your validation code"
+                android:id="@+id/textView2"
+                android:textSize="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/codeEdit"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_bg"
+                android:gravity="center"
+                android:hint="Enter your validation code"
+                android:maxLength="4"
+                android:inputType="number" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resend Code"
+                android:id="@+id/resendBtn"
+                android:layout_below="@+id/codeEdit"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/custom_bg"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modify your phone number"
+                android:id="@+id/modifyBtn"
+                android:layout_below="@+id/resendBtn"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/custom_bg"
+                android:layout_marginTop="-1dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Done"
+                android:id="@+id/doneBtn"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/tos_btn"
+                android:textColor="#4A90E2"
+                android:gravity="center_vertical|right"
+                android:visibility="invisible"
+                android:paddingRight="10dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4A90E2"
+        android:id="@+id/dummyLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:id="@+id/chatLogo"
+            android:src="@drawable/logo_chat"
+            android:layout_alignStart="@+id/letsLogo"
+            android:paddingLeft="20dp"
+            android:layout_centerInParent="true"
+            android:paddingBottom="27dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:id="@+id/letsLogo"
+            android:src="@drawable/logo_lets"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:paddingRight="20dp"
+            android:paddingTop="27dp"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/spinnerLayout"
+        android:background="#ffffff"
+        android:alpha="0.90"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:id="@+id/spinner"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/customspinner" />
+    </RelativeLayout>
+
+</RelativeLayout>

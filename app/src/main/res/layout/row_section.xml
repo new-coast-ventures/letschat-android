@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="horizontal"
+    android:paddingBottom="2dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="2dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#4A90E2"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Contact 1"
+            android:id="@+id/contactName"
+            android:textColor="#000"
+            android:textSize="16dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="27 min"
+            android:id="@+id/contactTimer"
+            android:textColor="#ff38b20f"
+            android:textSize="16dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/contactName"
+            android:layout_toEndOf="@+id/contactName"
+            android:layout_marginLeft="15dp" />
+
+        <ToggleButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/favBtn"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textOff=""
+            android:textOn=""
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/star_tb"
+            android:button="@android:color/transparent"
+            android:checked="false"
+            android:layout_marginRight="20dp"
+            android:enabled="false" />
+    </RelativeLayout>
+
+</LinearLayout>

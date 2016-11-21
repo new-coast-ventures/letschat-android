@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let&apos;s Chat"
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We need your phone # so we can send you a message and confirm it;s you!"
+        android:id="@+id/desc"
+        android:shadowColor="#000"
+        android:gravity="center_horizontal"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:id="@+id/okBtn"
+        android:layout_below="@+id/desc"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/tos_btn"
+        android:textColor="#4A90E2"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp" />
+</RelativeLayout>

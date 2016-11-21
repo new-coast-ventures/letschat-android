@@ -1,0 +1,258 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#4A90E2"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:id="@+id/dummyTitle"
+            android:layout_weight="10">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:id="@+id/imageView7"
+                android:src="@drawable/logo_chat"
+                android:paddingLeft="15dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:id="@+id/imageView8"
+                android:src="@drawable/logo_lets"
+                android:layout_marginTop="22dp"
+                android:paddingRight="15dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/dummyTitle"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/mainLayout"
+            android:layout_weight="90">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/relativeLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter your phone number"
+                    android:id="@+id/textView"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Why?"
+                    android:id="@+id/whyView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="5dp"
+                    android:textSize="15dp"
+                    android:textColor="#4A90E2"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/relativeLayout"
+                android:layout_centerHorizontal="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:text="Argentina"
+                        android:id="@+id/countryText"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/custom_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textSize="14dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text=">"
+                        android:id="@+id/textView4"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="false"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:textSize="25dp"
+                        android:typeface="serif" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/custom_bg"
+                    android:layout_marginTop="-1dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+54"
+                        android:id="@+id/countryCodeView"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:paddingLeft="10dp"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:ems="10"
+                        android:id="@+id/phoneText"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/countryCodeView"
+                        android:layout_toEndOf="@+id/countryCodeView"
+                        android:hint="Number without country code"
+                        android:textSize="14dp"
+                        android:paddingLeft="15dp"
+                        android:text=""
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:singleLine="true"
+                        android:background="@drawable/no_bg" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter yor name"
+                    android:id="@+id/textView5"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="15dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:id="@+id/nameEdit"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/custom_bg"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:hint="John Doe"
+                    android:textSize="14dp"
+                    android:singleLine="true"
+                    android:inputType="textCapWords" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/country_container"
+                    android:visibility="invisible"></FrameLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4A90E2"
+        android:id="@+id/dummyLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:id="@+id/chatLogo"
+            android:src="@drawable/logo_chat"
+            android:layout_alignStart="@+id/letsLogo"
+            android:paddingLeft="20dp"
+            android:layout_centerInParent="true"
+            android:paddingBottom="27dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:id="@+id/letsLogo"
+            android:src="@drawable/logo_lets"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:paddingRight="20dp"
+            android:paddingTop="27dp"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/spinnerLayout"
+        android:background="#ffffff"
+        android:alpha="0.90"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:id="@+id/spinner"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/customspinner" />
+    </RelativeLayout>
+
+</RelativeLayout>
